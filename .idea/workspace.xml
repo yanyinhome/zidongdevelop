@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce70b272-df8a-49ba-8f0d-644f89b12f64" name="Default Changelist" comment="action">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
+    <list default="true" id="ce70b272-df8a-49ba-8f0d-644f89b12f64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604371549720</updated>
-      <workItem from="1604371550866" duration="5705000" />
+      <workItem from="1604371550866" duration="6752000" />
     </task>
     <task id="LOCAL-00001" summary="action">
       <created>1604373124805</created>
@@ -87,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604380155681</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="action">
+      <created>1604382438410</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604382438410</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,18 +110,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="179" key="#Deployment/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604381281016" />
-    <state x="625" y="217" key="CommitChangelistDialog2" timestamp="1604380991118">
+    <state x="625" y="217" key="CommitChangelistDialog2" timestamp="1604382437698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="625" y="217" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604380991118" />
+    <state x="625" y="217" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604382437698" />
     <state x="249" y="184" key="DiffContextDialog" timestamp="1604373017444">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="249" y="184" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604373017444" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604380438960">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604382508192">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604380438960" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604382508192" />
     <state x="814" y="418" key="WebDeployment.AddServerDialog.v.1" timestamp="1604381236031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
