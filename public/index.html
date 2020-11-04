@@ -1,43 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="中信建投，中信建投证券，金融，证券">
+    <meta name="description"
+          content="中信建投证券[601066]成立于2005年11月2日，是经中国证监会批准设立的全国性大型综合证券公司。公司注册于北京，注册资本76.46亿元。公司A股于2018年6月20日在上交所主板上市，股票代码601066.SH。公司拥有实力强大的股东背景，主要股东有北京国有资本经营管理中心、中央汇金投资有限责任公司与中国中信股份有限公司。">
+    <meta name="theme-color" content="#000000"/>
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png"/>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <title></title>
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<script src="./vconsole.min.js"></script>
+<script>
+    let debug = '@debug';
+    let vConsole;
+    //调试阶段打开日志打印,发布阶段关闭 => '@debug'调试,''正式
+    if (debug !== '') {
+        showVconsole();
+    } else {
+        disableConsole();
+    }
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    //加载移动端控制台
+    function showVconsole() {
+        if (!vConsole) {
+            vConsole = new VConsole();
+        }
+    }
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    //正式版去除控制台打印
+    function disableConsole() {
+        console.log = () => {
+        };
+        console.error = () => {
+        };
+        console.info = () => {
+        };
+    }
+
+    function ready(callback) {
+        if (window.AlipayJSBridge) {
+            callback && callback();
+        } else {
+            document.title = '中信建投机构服务APP'
+            document.addEventListener('AlipayJSBridgeReady', callback, false);
+        }
+    }
+
+    ready(function () {
+    });
+</script>
+<section id="root"></section>
+</body>
 </html>

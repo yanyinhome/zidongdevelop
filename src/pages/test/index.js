@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import "lib-flexible"
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+
+import Test from "@view/test/test"
+
+ReactDOM.render(<Test/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

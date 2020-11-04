@@ -1,0 +1,21 @@
+before_script:
+build:
+  stage: build
+  except:
+    - /^release.*$/
+  script:
+    - sh build.sh test
+  artifacts:
+    name: "88880000"
+    paths:
+      - 88880000/
+deploy-build:
+  stage: build
+  only:
+    - /^release.*$/
+  script:
+    - sh build.sh
+  artifacts:
+    name: "88880000"
+    paths:
+      - 88880000/

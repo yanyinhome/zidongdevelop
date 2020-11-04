@@ -1,0 +1,226 @@
+/*色调*/
+@mainColor: #F15353; @mainGray:#3E3E3E;
+@white:#FFF; @blue:#52A8FF;
+@black:#000;
+/*字体默认*/
+@fontColor: #333333;
+/*字体*/
+@fontFace: 'PingFangSC-Regular';
+/*默认导航高度 navbar ios:40+88 adr:50+96 z:45+90*/
+/*默认点赞、收藏、分享高度*/
+@standardWhite_content:#ffffff;
+@standardRed: #f15353;
+@standardBlack_title: #3e3e3e;
+@standardGray_section: #7d7d7d;
+@standardGray_assist: #afafaf;
+@standardGray_input_border: #dddddd;
+@standardGray_separator_line: #e9e9e9;
+@standardWhite_content: #ffffff;
+@standardGray_separator_module: #f3f4f6;
+@standardYellow: #c7954c;
+@standardBlue: #52a8ff;
+@standardGreen: #3aa432;
+@standardOther: #a6b6c8;
+/* @2x  @3x 图片使用 */
+.bg-image(@url){
+  background-image:~"url('@{url}@2x.png')";
+  background-size:cover;
+  background-repeat: no-repeat;
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+    background-image:~"url('@{url}@3x.png')";
+  }
+}
+
+.assets(@url,@type:'png') {
+  background-image: ~"url('../../assets/@{url}@2x.@{type}')";
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+    background-image: ~"url('../../assets/@{url}@3x.@{type}')";
+  }
+}
+
+.tl{text-align:left}
+.tc{text-align:center}
+.tr{text-align:right}
+/*通用字体*/
+.fontcomm{font-family: 'PFM';color:#222;}
+/*通用布局*/
+#root{.whl(100%,100vh,normal);}
+//tabbar
+.am-navbar-title{font-family: 'PFM';color:#222;font-size:32px;}
+/*toast*/
+.am-toast-text{.base-font(26px,#FFF)}
+.am-list-body,.am-tab-bar-bar{border:0 none!important;}
+.am-tabs-pane-wrap{
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+/*loading*/
+.am-icon-loading{.whl(26px,26px,normal)}
+.am-icon-loading.am-icon-lg{.whl(42px,42px,normal)}
+/*Model.Alert*/
+.am-modal-header{padding-bottom:0!important;}
+/*pullRefresh*/
+.am-pull-to-refresh-indicator{color: grey;text-align: center;height: 55px;
+  &.am-pull-to-refresh-indicator {margin-top: -55px;}
+}
+
+*{padding:0;margin:0;box-sizing: border-box;word-break: break-all;}
+body{ row-height: 50px;background-color:@white;-webkit-font-smoothing: antialiased;touch-action: none;
+  font-stretch: normal;font-style: normal;font-variant: normal;font-weight: normal;font-weight-over: 700;
+  -webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+  -webkit-overflow-scrolling: touch;min-height: 100vh;min-width: 320px;font-family:  'PFM';overflow:hidden;
+}
+html,body{.whl(100%,100vh,normal);}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+h1,h2,h3,h4,h5,h6{font-weight:500;}
+ul, li, ol{list-style: none;}
+em,i,u{font-style:normal;}
+a{text-decoration: none;color: #222;-webkit-tap-highlight-color:transparent;}
+code{.m-font(24px,#666);display:block;}
+/*scrollbar*/
+::-webkit-scrollbar {width:0;}
+::-webkit-scrollbar:horizontal {height:0;}
+::-webkit-scrollbar-button {height:0;width:0;}
+
+&::-webkit-scrollbar {
+  display: none;
+}
+/*字号-颜色*/
+.base-font(@font-size:22px,@font-color:'black') {
+  font-family: 'PingFangSC-Regular'!important;
+  font-size: @font-size!important;
+  color: @font-color!important;
+}
+
+.l-font(@font-size:22px,@font-color:'black') {
+  font-family: 'PingFangSC-Light'!important;
+  font-size: @font-size!important;
+  color: @font-color!important;
+}
+
+.m-font(@font-size:22px,@font-color:'black') {
+  font-family: 'PingFangSC-Medium'!important;
+  font-size: @font-size!important;
+  color: @font-color!important;
+}
+.l-font(@font-size:22px,@font-color:'black') {
+  font-family: 'PingFangSC-Light'!important;
+  font-size: @font-size!important;
+  color: @font-color!important;
+}
+
+/*宽-高-行高*/
+.whl(@w:auto,@h:auto,@l:normal) {
+  width: @w;
+  height: @h;
+  line-height: @l;
+}
+
+.whlImp(@w:auto,@h:auto,@l:normal) {
+  width: @w!important;
+  height: @h!important;
+  line-height: @l!important;
+}
+
+/*禁止换行，文本溢出省略*/
+.ellipsis() {
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/*多行文本溢出省略*/
+.ellipsisMore(@n:2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @n;
+  -webkit-box-orient: vertical;
+}
+
+/* 走马灯 */
+.am-carousel-wrap{
+  font-size: 10px;
+  .am-carousel-wrap-dot{
+    width: 20px;
+    height: 20px;
+    padding:0 5px;
+  }
+  .am-carousel-wrap-dot span{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,.5) !important;
+  }
+  .am-carousel-wrap-dot-active span{
+    background-color: rgba(255,255,255,1) !important;
+  }
+}
+/*通用*/
+.checkbox{
+  input[type='checkbox']{
+    .whlImp(26px,26px);border:solid 1PX #3e3e3e;background-color:@white!important;
+  }
+}
+.i_checkbox{
+  .input_check {appearance: none;-webkit-appearance: none;outline: none;display: none;}
+  .input_check+span {
+    .whl(22px,22px); background-color:@white; display: inline-block;
+    border-radius: 0!important; border: 1PX solid #979797!important;position:relative;top:3px;
+  }
+  .input_check:checked+span {
+    &::before{content:'';display:inline-block; width: 8px;
+      height:13px;border-color: #979797;
+      border-style: solid;border-width: 0 3px 3px 0;transform: rotate(45deg);
+      position:absolute;top:-1px;left:4px;
+    }
+  }
+}
+
+/*输入键盘通用*/
+.am-number-keyboard-wrapper{margin-top:50px;
+  tr,td,th{.m-font(48px,@mainGray);}
+  .am-number-keyboard-item.keyboard-confirm{background-color:#B71B20!important;.m-font(48px,@white);
+    &.am-number-keyboard-item-disabled{.m-font(48px,#DDD);}
+  }
+}
+
+.am-picker-popup-wrap .am-picker-popup {
+  .am-picker-popup-content {
+    .am-picker-popup-body .am-picker-popup-header {
+      .am-picker-popup-header-left {
+        color: #FFFFFF !important;
+        width: auto !important;
+      }
+
+      .am-picker-popup-header-right {
+        color: #FFFFFF !important;
+        width: auto !important;
+      }
+
+      .am-picker-popup-item-active {
+        background-color: #F15353;
+        position: relative;
+        opacity: .8;
+      }
+    }
+    .am-picker-col{height:415px!important;
+      .am-picker-col-item-selected{.base-font(32px,#E83637)}
+
+    }
+  }
+  .am-picker-popup-header {
+    background-color: #f15353;
+  }
+}
+
+.am-pull-to-refresh-up{
+  .am-pull-to-refresh-indicator{margin-top:0!important;}
+}
